@@ -1,0 +1,7 @@
+#! /usr/bin/bash
+
+echo $1
+
+hostname -I | awk '{ORS = "" }{print "\n" $1 "," }' >> "/home/casper/skole/R-Team/routeScan.txt"
+
+traceroute -n $1 |tail -n+2 | awk '{ORS = ""} { print $2 ","}' >> "/home/casper/skole/R-Team/routeScan.txt"
