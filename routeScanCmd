@@ -2,6 +2,6 @@
 
 echo $1
 
-hostname -I | awk '{ORS = "" }{print "\n" $1 "," }' >> "/home/casper/skole/R-Team/routeScan.txt"
+hostname -I | awk '{ORS = "" }{print "\n" $1 "," }' >> "/home/routeScan.txt"
 
 traceroute -n $1 |tail -n+2 | awk '{ORS = ""} { print $2 ","}' >> "/home/casper/skole/R-Team/routeScan.txt"
