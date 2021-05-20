@@ -37,13 +37,6 @@ def switch_method(argument):
 		2:two
 		}
 	switcher[int(argument)]()
-	#if argument == "0":
-	#	zero()
-	#elif argument == "1":
-	#	one()
-	#elif argument == "2":
-	#	two()
-	#else:
-	#	print("you done goofed")
-
+	
+	
 switch_method(option)
